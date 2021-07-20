@@ -1,6 +1,7 @@
 package hello.hellospring;
 
 import hello.hellospring.repository.JdbcMemberRepository;
+import hello.hellospring.repository.JdbcTemplateMemberRepository;
 import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +28,9 @@ public class SpringConfig {
     @Bean
     public MemberRepository memberRepository() {
 //        return new MemoryMemberRepository();
-        return new JdbcMemberRepository(dataSource);
+//        return new JdbcMemberRepository(dataSource);
+
+        return new JdbcTemplateMemberRepository(dataSource);
         /*
         * 다형성 -> 인터페이스를 두고 구현체만 바꾸어 적용하면 된다.
         * SOLID 원칙 - OCP(Open-Closed Principle, 개방 폐쇄 원칙)
