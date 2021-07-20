@@ -16,7 +16,8 @@ dependencies {
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'	// html 템플릿 엔진
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.springframework.boot:spring-boot-starter-jdbc'	// java 가 DB 랑 붙기 위해서 꼭 필요한 라이브러리
+//	implementation 'org.springframework.boot:spring-boot-starter-jdbc'	// java 가 DB 랑 붙기 위해서 꼭 필요한 라이브러리
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	runtimeOnly 'com.h2database:h2'	// DB 랑 붙을 때 DB 에서 제공하는 클라이언트가 필요
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'	// 기본적으로 들어가는 테스트 라이브러리
 }

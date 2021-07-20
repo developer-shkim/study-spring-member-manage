@@ -3,11 +3,13 @@ package hello.hellospring.service;
 import hello.hellospring.domain.Member;
 import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.repository.MemoryMemberRepository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
 // command + shift + T => create new test
+@Transactional  // jpa 는 항상 해주어야 한다.
 public class MemberService {
 //    private final MemberRepository memberRepository = new MemoryMemberRepository();
     // 외부에서 주입하도록 변경 = DI(Dependency Injection)
