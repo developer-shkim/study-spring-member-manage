@@ -30,7 +30,16 @@ public class MemberService {
 //        Optional<Member> byName = memberRepository.findByName(member.getName());
 
         // control + t => 리팩토링
-        validateDuplicateMember(member);
+
+        long start = System.currentTimeMillis();
+
+        try {
+            validateDuplicateMember(member);
+        } finally {
+            long finish = System.currentTimeMillis();
+            long timeMs = finish - start;
+            System.out.println("join = " + timeMs + "ms");
+        }
 
         return member.getId();
     }
