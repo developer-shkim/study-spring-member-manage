@@ -31,15 +31,7 @@ public class MemberService {
 
         // control + t => 리팩토링
 
-        long start = System.currentTimeMillis();
-
-        try {
-            validateDuplicateMember(member);
-        } finally {
-            long finish = System.currentTimeMillis();
-            long timeMs = finish - start;
-            System.out.println("join = " + timeMs + "ms");
-        }
+        validateDuplicateMember(member);
 
         return member.getId();
     }

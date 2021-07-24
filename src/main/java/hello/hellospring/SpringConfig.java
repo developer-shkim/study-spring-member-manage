@@ -1,5 +1,6 @@
 package hello.hellospring;
 
+import hello.hellospring.aop.TimeTraceApp;
 import hello.hellospring.repository.JdbcMemberRepository;
 import hello.hellospring.repository.JdbcTemplateMemberRepository;
 import hello.hellospring.repository.JpaMemberRepository;
@@ -32,6 +33,12 @@ public class SpringConfig {
     public MemberService memberService() {
         return new MemberService(memberRepository);
     }
+
+    // 인지하기 쉽도록 여기에, 자체에 Component 로 해도 된다.
+//    @Bean
+//    public TimeTraceApp timeTraceApp() {
+//        return new TimeTraceApp();
+//    }
 
 //    @Bean
 //    public MemberRepository memberRepository() {

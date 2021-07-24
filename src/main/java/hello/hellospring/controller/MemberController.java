@@ -21,6 +21,9 @@ public class MemberController {
     @Autowired  // 스프링이 주입해준다.
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
+        System.out.println("memberService = " + memberService.getClass());
+        // memberService = class hello.hellospring.service.MemberService$$EnhancerBySpringCGLIB$$92aa0149
+        // memberService 복제해서 코드를 조작하는 기술
     }
 
     // url 쳤을 때 매핑
